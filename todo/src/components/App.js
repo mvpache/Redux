@@ -18,7 +18,6 @@ class App extends Component {
   };
 
   submitTodo = (event) => {
-    console.log('submit', this.props.todos)
     event.preventDefault();
     console.log(this.state.newTodo)
     this.props.addTodo(this.state.newTodo);
@@ -33,7 +32,6 @@ class App extends Component {
           <input type="text" onChange={this.handleInput} placeholder="Add a new todo" value={this.state.newTodo} />
         </form>
         <div>
-          {console.log('prop', this.props.todos)}
           <ol>
           {this.props.todos.map((todo, i) => {
             return (
